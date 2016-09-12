@@ -19,7 +19,7 @@ router.get('/sys/methodology/id/:id', function (req, res) {
 
 router.get('/sys/methodology/nam/:name', function (req, res) {
     models.methodology.findAll({ 
-        where: { $or: [{mename: {$like: '%'+req.params.name+'%'}}, {medescription: {like: '%'+ req.params.name+'%'}},, {meauthor: {like: '%'+ req.params.name+'%'}}] }}).then(function (result) {
+        where: { $or: [{mename: {$like: '%'+req.params.name+'%'}}, {medescription: {like: '%'+ req.params.name+'%'}}, {meauthor: {like: '%'+ req.params.name+'%'}}] }}).then(function (result) {
         publicResource.ReturnResult(res, result);
     });
 });

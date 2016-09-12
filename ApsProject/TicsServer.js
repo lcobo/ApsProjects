@@ -84,6 +84,9 @@ app.use("/api",version);
 var methodology = require("./Modules/Configuration/methodologyRouter.js")
 app.use("/api",methodology);
 
+var method = require("./Modules/Configuration/methodRouter.js")
+app.use("/api",method);
+
 
 
 /*var bed = require("./modules/HospitalizationEvents/hebedRouter.js");
