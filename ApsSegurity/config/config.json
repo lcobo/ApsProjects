@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "9004",
+    "database": "SGE_APS",
+    "host": "localhost",
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false,
+      "freezeTableName": true
+    }
+  },
+  "sqlServer": {
+    "username": "postgres",
+    "password": "9004",
+    "database": "SGE_APS",
+    "host": "127.0.0.1",
+    "dialect": "tedious",
+    "define": {
+      "timestamps": false,
+        "freezeTableName": true
+    }
+  },
+  "production": {
+    "username": "postgres",
+    "password": "9004",
+    "database": "SGE_APS",
+    "host": "localhost",
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false,
+      "freezeTableName": true
+    }
+  }
+}

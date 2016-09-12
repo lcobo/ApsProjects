@@ -1,0 +1,44 @@
+<div class="row">
+
+<div class="col-md-12">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <tabset justified="true">
+        <tab heading="{{'TENANT_TITLE'| translate}}"  active="tabactive" select="abactive = false">
+            <table class="table table-hover">
+                <tr>
+                    <th>{{'TENANT_LIST'| translate}} </th>
+                </tr>
+                <tr ng-repeat="ti in ListTenant">
+                    <td>{{ti.rolname}}</td>
+
+                </tr>
+            </table>
+
+           
+
+        </tab>
+        <tab heading="{{'PROGRAM_TITLE_CREATE'| translate}}">
+            <form>
+                <div class="form-group">
+                    <label for="tname">{{'TENANT_NAME_SAVE'| translate}}</label>
+                    <input type="text" class="form-control" ng-model="tname" id="tname" placeholder="{{'TENANT_NAME_SAVE'| translate}}">
+                </div>
+                <div class="form-group">
+                    <label for="tpassword">{{'TENANT_PASS_SAVE'| translate}}</label>
+                    <input type="password" class="form-control" ng-model="tpassword" id="tpassword" placeholder="{{'TENANT_PASS_SAVE'| translate}}">
+                </div>
+                <div class="form-group">
+                    <label for="tdescription">{{'TENANT_DESCRIPTION_SAVE'| translate}}</label>
+                    <input type="text" class="form-control" ng-model="tdescription" id="tdescription" placeholder="{{'TENANT_DESCRIPTION_SAVE'| translate}}">
+                </div>
+                <button type="button" class="btn btn-default" ng-click="showtab()">{{'BUTTON_CANCEL'| translate}}</button>
+                <button type="button" class="btn btn-default" ng-click="createTenant({  tname:tname, tpassword:tpassword, tdescription:tdescription })">{{'BUTTON_SAVE'| translate}}</button>
+
+            </form>
+
+        </tab>
+
+    </tabset>
+ </div>
+
+</div>

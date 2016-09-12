@@ -1,0 +1,13 @@
+{
+  "name": "ticSalud",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "pg": "^4.5.6",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.24.1",
+    "sequelize-restful": "^0.4.3"
+  }
+}

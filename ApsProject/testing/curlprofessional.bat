@@ -1,0 +1,1 @@
+curl -d @professional.json "http://localhost:5433/api/HealthProfessional" -X POST -H "Content-Type: application/json"

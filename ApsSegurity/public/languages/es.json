@@ -1,0 +1,46 @@
+{
+	
+	"-----------common----------------":"",
+	"OPTIONLIST_SELECT":"Seleccione una opción",
+	"NEXT":"Continuar",
+	"PREV":"Anterior",
+	"SAVE":"Enviar Formulario",
+	"UPDATE":"Actualizar Registro",
+	"ACCEPT":"Continuar",
+  "BUTTON_CANCEL": "Cancelar",
+  "BUTTON_SAVE": "Guardar",
+
+
+	
+	"----------- INDEX----------------":"",
+	"TITLE":"SISTEMA DE GESTIÓN DE ROLES Y USUARIOS",
+  "SUBTITLE": "JTECNOLOGIA",
+
+  	"-----------PROGRAMS----------------":"",
+	"PROGRAM_LIST":"LISTA DE PROGRAMAS",
+  "PROGRAM_OPTION_LIST": "LISTA DE OPCIONES",
+  "PROGRAM_SEE": "VER",
+  "PROGRAM_TITLE_CREATE": "CREAR PROGRAMA",
+  "PROGRAM_TITLE": "PROGRAMAS",
+  "PROGRAM_OPTION_TEXT_SAVE": "Nombre de la opcion",
+  "PROGRAM_OPTION_SAVED": "Opcion Guardada",
+  "PROGRAM_OPTION_NOSAVED": "Error al Guardar opción",
+  "PROGRAM_TEXT_SAVE": "Nombre del programa",
+
+  "ROLE_TITLE": "ROLES",
+  "ROLE_LIST": "LISTA DE ROLES",
+  "ROLE_SHOW": "VER",
+  "ROLE_TITLE_CREATE": "CREAR ROL",
+  "PROGRAM_SELECT": "PROGRAMA- APLICACIÓN",
+  "PROGRAM_OPTION_SELECT": "OPCION DEL PROGRAMA",
+  "ROLE_TEXT_SAVE": "NOMBRE DEL ROL",
+
+    "------------USER": "",
+  "USER_LIST": "LISTA DE USUARIO",
+  "USER_SHOW": "VER USUARIOS",
+  "USER_TITLE": "USUARIOS",
+  "USER_NAME":"NOMBRE DE USUARIO", 
+  "USER_PASS":"CONTRASEÑA"
+	
+	
+}

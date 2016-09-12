@@ -1,0 +1,68 @@
+<div class="row">
+
+<div class="col-md-12">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <tabset justified="true">
+        <tab heading="{{'PROGRAM_TITLE'| translate}}"  active="tabactive" select="abactive = false">
+            <table class="table table-hover">
+                <tr>
+                    <th>{{'PROGRAM_LIST'| translate}} </th>
+                    <th>{{'PROGRAM_SEE'| translate}} </th>
+                </tr>
+                <tr ng-repeat="lp in ListProgram">
+                    <td>{{lp.pname}}</td>
+                    <td><a  href="#/programs" ng-click="showOption(lp)">ver</a></td>
+
+                </tr>
+            </table>
+
+            <div class="panel panel-info" ng-show="programSelected.pname?true:false">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-4"> {{programSelected.pname}} </div>
+                        <div class="col-md-8 text-right">
+                            <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="showhideform()"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                        </div>
+                    </div>
+                 </div>
+                <div class="panel-body">
+                    <form ng-show="showformoption">
+                        <div class="form-group">
+                            <label for="optionName">{{'PROGRAM_OPTION_TEXT_SAVE'| translate}}</label>
+                            <input type="text" class="form-control" ng-model="optionName" id="optionName" placeholder="{{'PROGRAM_OPTION_TEXT_SAVE'| translate}}">
+                        </div>
+                        <button type="button" class="btn btn-default" ng-click="showhideform()">{{'BUTTON_CANCEL'| translate}}</button>
+                        <button type="button" class="btn btn-default" ng-click="CreateOption({ optionname: optionName, programid: programSelected.pid })">{{'BUTTON_SAVE'| translate}}</button>
+
+                    </form>
+                    <table class="table table-hover">
+                        <tr>
+                            <th>{{'PROGRAM_OPTION_LIST'| translate}} </th>
+                        </tr>
+                        <tr ng-repeat="lo in ListOption">
+                            <td>{{lo.optionname}}</td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </tab>
+        <tab heading="{{'PROGRAM_TITLE_CREATE'| translate}}">
+            <form>
+                <div class="form-group">
+                    <label for="programname">{{'PROGRAM_TEXT_SAVE'| translate}}</label>
+                    <input type="text" class="form-control" ng-model="programname" id="programname" placeholder="{{'PROGRAM_TEXT_SAVE'| translate}}">
+                </div>
+                <button type="button" class="btn btn-default" ng-click="showtab()">{{'BUTTON_CANCEL'| translate}}</button>
+                <button type="button" class="btn btn-default" ng-click="createProgram({ pname: programname})">{{'BUTTON_SAVE'| translate}}</button>
+
+            </form>
+
+        </tab>
+
+    </tabset>
+ </div>
+
+</div>

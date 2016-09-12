@@ -1,0 +1,114 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h3>{{'TITTLE_BED' |translate}}</h3>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+ 
+
+                    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        {{alert.msg}}
+                    </alert>
+
+                    <div class="row">
+                        <div class="col-xs-1 col-md-12">
+                            <div class="row">
+                                <div ng-repeat="(key,room) in lbeds">
+                                    <div ng-repeat="bed in room.hebeds" class="col-xs-6 col-md-2 btn btn-default thumbnail" ng-click="openmodal(bed.beid,bedstatus[bed.beid])">
+                                        <div class="row">
+                                            <div class="col-md-2"><span style="background-color:{{colorstyle[key].background }}; border-color:{{colorstyle[key].border }};" class="glyphicon glyphicon-home" aria-hidden="true"></span></div>
+                                            <div class="col-md-9"><font size="14">{{bed.bename}}</font></div>
+                                            <div class="col-md-1"></div>
+
+                                        </div>
+                                        <img ng-show="bedstatus[bed.beid].status=='Inactive'" src="../../img/bedBussy.png" alt="..." class="img-circle">
+                                        <img ng-show="bedstatus[bed.beid].status=='Active'" src="../../img/bedAlert.png" alt="..." class="img-circle">
+                                        <img ng-show="bedstatus[bed.beid].status=='Exit' || bedstatus[bed.beid].status==undefined" src="../../img/bedFree.png" alt="..." class="img-circle">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+           
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-5 text-center">
+                {{'BED_CONVENTION' |translate}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-4 btn btn-xs btn-default">
+                        {{'BED_FREE' |translate}}
+                    </div>
+                    <div class="col-md-4 btn btn-xs btn-success">
+                        {{'BED_BUSSY' |translate}}
+                    </div>
+                    <div class="col-md-4 btn btn-xs btn-danger">
+                        {{'BED_ALERT' |translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-5">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{'BED_CONVENTION_DESC' |translate}}
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/ng-template" id="ModalHospitalization.html">
+    <div class="modal-header">
+        <h3 class="modal-title">{{'MODAL_TITTLE'| translate}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="pid">{{'PATIENT_ID'|translate}}</label>
+            <input type="text" ng-model="patientid" class="form-control" id="bname">
+        </div>
+        <div class="form-group">
+            <label for="pname">{{'PATIENT_NAME'|translate}}</label>
+            <input type="text" ng-model="patientname" class="form-control" id="bname">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">{{'MODAL_CANCEL'| translate}}</button>
+        <button class="btn btn-primary" ng-click="saveHospitalization()">{{'MODAL_SAVE'| translate}}</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="ModalEndHospitalization.html">
+    <div class="modal-header {{alertHospitalization}}">
+        <h3 class="modal-title">{{'MODAL_TITTLE'| translate}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="pid">{{'PATIENT_ID'|translate}}</label>
+            <input type="text" ng-model="patientid" class="form-control" id="bname" disabled>
+        </div>
+        <div class="form-group">
+            <label for="pname">{{'PATIENT_NAME'|translate}}</label>
+            <input type="text" ng-model="patientname" class="form-control" id="bname" disabled>
+        </div>
+    </div>
+    <div class="modal-footer">
+	    <button class="btn btn-success" ng-click="attendHospitalization()">{{'MODAL_ATTEND'| translate}}</button>
+        <button class="btn btn-default" ng-click="cancel()">{{'MODAL_CANCEL'| translate}}</button>
+        <button class="btn btn-success" ng-show="alertHospitalization==''" ng-click="updateHospitalization()">{{'MODAL_EXIT'| translate}}</button>
+    </div>
+</script>
+
+

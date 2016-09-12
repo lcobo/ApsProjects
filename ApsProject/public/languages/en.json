@@ -1,0 +1,46 @@
+{
+	
+	"-----------common----------------":"",
+	"OPTIONLIST_SELECT":"select option",
+	"NEXT":"Next",
+	"PREV":"Back",
+	"SAVE":"Send Form",
+	"UPDATE":"Update Register",
+	"ACCEPT":"Accept",
+  "BUTTON_CANCEL": "Cancel",
+  "BUTTON_SAVE": "Save,
+
+
+	
+	"----------- INDEX----------------":"",
+	"TITLE":"ROLE AND USER SISTEM",
+  "SUBTITLE": "SECRETARIA DEPARTAMENTAL DE SALUD DEL CAUCA",
+
+  	"-----------PROGRAMS----------------":"",
+	"PROGRAM_LIST":"PROGRAM LIST",
+  "PROGRAM_OPTION_LIST": "OPTION LIST",
+  "PROGRAM_SEE": "SHOW",
+  "PROGRAM_TITLE_CREATE": "CREATE PROGRAM",
+  "PROGRAM_TITLE": "PROGRAM",
+  "PROGRAM_OPTION_TEXT_SAVE": "Option name",
+  "PROGRAM_OPTION_SAVED": "Option saved",
+  "PROGRAM_OPTION_NOSAVED": "error to save option",
+  "PROGRAM_TEXT_SAVE": "Program name",
+
+  "------------ROLE": "",
+  "ROLE_TITLE": "ROLES",
+  "ROLE_LIST": "ROLES LIST",
+  "ROLE_SHOW": "SHOW",
+  "ROLE_TITLE_CREATE": "CREATE ROLE",
+  "PROGRAM_SELECT": "PROGRAM -APPS",
+  "PROGRAM_OPTION_SELECT": "PROGRAM OPTIONS",
+  "ROLE_TEXT_SAVE": "ROLE NAME",
+
+  "------------USER": "",
+  "USER_LIST": "LIST USER",
+  "USER_SHOW": "SHOW USER",
+  "USER_TITLE": "USERS",
+  "USER_NAME":"NAME USER", 
+  "USER_PASS":"PASSWORD"
+	
+}

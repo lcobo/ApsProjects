@@ -1,0 +1,112 @@
+<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+<tabset justified="true">
+  <tab heading="{{'TAB_ROOM'| translate}}">
+      <div class="form-group">
+          <label for="roomname">{{'ROOM_NAME'|translate}}</label>
+          <input ng-model="rname" type="text" class="form-control" id="roomname">
+      </div>
+      <div class="form-group">
+          <label for="bedstatus">{{'ROOM_STATUS'|translate}}</label>
+          <input type="radio" ng-checked="rstatus=='Active'" ng-click="rstatus='Active'" value="Active" name="rstatus"> {{'ROOM_STATUS_ACTIVE'|translate}}
+          <input type="radio" ng-checked="rstatus=='Inactive'" ng-click="rstatus='Inactive'" value="Inactive" name="rstatus"> {{'ROOM_STATUS_INACTIVE'|translate}}
+      </div>
+      <div class="form-group">
+          <label for="room">{{'ROOM_AREA'|translate}}</label>
+          <input ng-model="rarea" type="text" class="form-control" id="roomselect">
+      </div>
+      <div class="form-group text-right">
+          <button class="btn btn-default" ng-click="initform()">{{'ROOM_CANCEL'|translate}}</button>
+          <button ng-show="mode=='create'" class="btn btn-primary" ng-click="saveRoom(rname,rstatus,rarea)">{{'ROOM_SAVE'|translate}}</button>
+          <button ng-show="mode=='edit'" class="btn btn-primary" ng-click="updateRoom(rid,rname,rstatus,rarea)">{{'ROOM_UPDATE'|translate}}</button>
+          
+      </div>
+      <div class="row">
+
+      </div> 
+      <div class="row">
+          <div class="col-md-12">
+              <div class="panel panel-default">
+                 <div class="panel-heading"><h3> {{'ROOM_LIST'|translate}}</h3></div>
+                  <div class="panel-body">
+                      <table class="table">
+                          <tr>
+                              <th>{{'ROOM_NAME'|translate}}</th>
+                              <th>{{'ROOM_STATUS'|translate}}</th>
+                              <th>{{'ROOM_AREA'|translate}}</th>
+                          </tr>
+                          <tr class="{{room.rostatus=='Inactive'?'danger':'info'}}" ng-repeat="room in rooms">
+                              <td>{{room.roname}}</td>
+                              <td>{{room.rostatus}}</td>
+                              <td>{{room.roarea}}</td>
+                              <td><button ng-click="selectRoom(room.roid,room.roname,room.rostatus,room.roarea)"><span class="glyphicon glyphicon-edit"></span></button></td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </tab>
+<tab heading="{{'TAB_BED'| translate}}" >
+    <div class="form-group">
+        <label for="bedname" >{{'BED_NAME'|translate}}</label>
+        <input type="text" ng-model="bname" class="form-control" id="bname">
+    </div>
+    <div class="form-group">
+        <label for="bedstatus">{{'BED_STATUS'|translate}}</label>
+        <input type="radio" ng-checked="bstatus=='Active'" ng-click="bstatus='Active'" value="Active" name="rstatus"> {{'BED_STATUS_ACTIVE'|translate}}
+        <input type="radio" ng-checked="bstatus=='Inactive'" ng-click="bstatus='Inactive'" value="Inactive" name="rstatus"> {{'BED_STATUS_INACTIVE'|translate}}
+    </div>
+    <div class="form-group">
+        <label for="room">{{'ROOM_SELECT'|translate}}</label>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                {{RoomName?RoomName:'ROOM_SELECT' | translate}}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                <li ng-repeat="rm in rooms">
+                    <a ng-click='selectRoominBed(rm)'>{{rm.roname}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group text-right">
+        <button class="btn btn-default" ng-click="initform()">{{'BED_CANCEL'|translate}}</button>
+        <button ng-show="bmode=='create'" class="btn btn-primary" ng-click="saveBed(bname,bstatus,broom)">{{'BED_SAVE'|translate}}</button>
+        <button ng-show="bmode=='edit'" class="btn btn-primary" ng-click="updateBed(bid,bname,bstatus,broom)">{{'BED_UPDATE'|translate}}</button>
+
+    </div>
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3> {{'BED_LIST'|translate}}</h3></div>
+                <div class="panel-body">
+                    <div ng-repeat="lroom in lbeds">
+                        <label class="text-center">{{lroom.roname}}</label>
+                        <table class="table">
+                            <tr>
+                                <th>{{'BED_CODE
+'|translate}}</th>
+	`			<th>{{'BED_NAME'|translate}}</th>
+                                <th>{{'BED_STATUS'|translate}}</th>
+					
+                            </tr>
+                            <tr class="{{bed.bestatus=='Inactive'?'danger':'info'}}" ng-repeat="bed in lroom.hebeds">
+                                <td>{{bed.bename}}</td>
+                                <td>{{bed.bestatus}}</td>
+                                <td><button ng-click="selectBed(bed.beid,bed.bename,bed.bestatus,bed.heroom,lroom)"><span class="glyphicon glyphicon-edit"></span></button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</tab>
+</tabset>
+

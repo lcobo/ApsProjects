@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+        <alert ng-repeat="alert in alerts" type="danger" close="closeAlert($index)">{{alert.msg}}</alert>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{'LOGIN_TITTLE'| translate}}</h3>
+                </div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="user">{{'LOGIN_LABEL_USER'| translate}}</label>
+                            <input type="text" class="form-control" id="user" ng-model="username" placeholder="{{'LOGIN_PLACEHOLDER_USER'| translate}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">{{'LOGIN_LABEL_PASS'| translate}}</label>
+                            <input type="password" class="form-control" id="Password" ng-model="password" placeholder="{{'LOGIN_PLACEHOLDER_PASS'| translate}}">
+                        </div>
+                        <button type="submit" class="btn btn-primary" ng-click="login(username,password)">{{'LOGIN_BUTTON'| translate}}</button>
+                    </form>
+                </div>
+            </div>
+</div>
+    <div class="col-md-4">
+
+    </div>
+
+
+</div>
+
+
+
+

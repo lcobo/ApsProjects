@@ -1,0 +1,85 @@
+<div class="row">
+
+<div class="col-md-12">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <tabset justified="true">
+        <tab heading="{{'USER_TITLE'| translate}}"  active="tabactive" select="abactive = false">
+            <table class="table table-hover">
+                <tr>
+                    <th>{{'USER_LIST'| translate}} </th>
+                    <th>{{'USER_SHOW'| translate}} </th>
+                </tr>
+                <tr ng-repeat="lu in ListUser">
+                    <td>{{lu.uname}}</td>
+                    <td><a  href="#/users" ng-click="showRoleUser(lu)">ver</a></td>
+
+                </tr>
+            </table>
+
+            <div class="panel panel-info" ng-show="UserSelected.uname?true:false">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-4"> {{UserSelected.uname}} </div>
+                   </div>
+                 </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12"> <label>{{'USER_ROLE_LIST'| translate}}</label></div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr ng-repeat="lur in ListRoles" class="{{style[lur.rid]}}">
+                                        <td>{{lur.rname}}</td>
+                                        <td>
+                                            <button ng-click="AssingRoletoUser({ userid: UserSelected.uid, rolid: lur.rid })" type="button" class="btn btn-{{style[lur.rid]}}" aria-label="Left Align">
+                                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+</tab>
+        <tab heading="{{'USER_TITLE_CREATE'| translate}}">
+            <form>
+                <div class="form-group">
+                    <label for="uname">{{'USER_TEXT_SAVE'| translate}}</label>
+                    <input type="text" class="form-control" ng-model="uname" id="uname" placeholder="{{'USER_NAME_SAVE'| translate}}">
+                </div>
+                <div class="form-group">
+                    <label for="upassword">{{'USER_PASS_SAVE'| translate}}</label>
+                    <input type="password" class="form-control" ng-model="upassword" id="upassword" placeholder="{{'USER_PASS_SAVE'| translate}}">
+                 </div>
+                <div class="form-group">
+                    <label for="optionName">{{'USER_TENANT'| translate}}</label>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                            {{tenantName?tenantName:'TENANT_SELECT' | translate}}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                            <li ng-repeat="lt in ListTenant">
+                                <a ng-click='selectTenant(lt)'>{{lt.rolname}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default" ng-click="showtab()">{{'BUTTON_CANCEL'| translate}}</button>
+                <button type="button" class="btn btn-default" ng-click="createUser({  uname: uname, ustatus: 1, upassword: upassword,utenant:utenant.rolname })">{{'BUTTON_SAVE'| translate}}</button>
+
+            </form>
+
+        </tab>
+
+    </tabset>
+ </div>
+
+</div>

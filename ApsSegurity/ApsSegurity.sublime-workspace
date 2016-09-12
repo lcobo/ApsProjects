@@ -1,0 +1,215 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"t",
+				"type"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/ApsProjects/ApsSegurity",
+		"/E/ApsProjects/ApsSegurity/config",
+		"/E/ApsProjects/ApsSegurity/modules",
+		"/E/ApsProjects/ApsSegurity/modules/credentialManager",
+		"/E/ApsProjects/ApsSegurity/public",
+		"/E/ApsProjects/ApsSegurity/public/core",
+		"/E/ApsProjects/ApsSegurity/public/directives",
+		"/E/ApsProjects/ApsSegurity/public/modules",
+		"/E/ApsProjects/ApsSegurity/public/modules/login",
+		"/E/ApsProjects/ApsSegurity/public/modules/Program",
+		"/E/ApsProjects/ApsSegurity/public/modules/Role",
+		"/E/ApsProjects/ApsSegurity/public/modules/Tenant",
+		"/E/ApsProjects/ApsSegurity/public/modules/User"
+	],
+	"file_history":
+	[
+		"/E/ApsProjects/ApsSegurity/config/config.json",
+		"/E/ApsProjects/ApsSegurity/public/core/serversoftApi.js",
+		"/E/ApsProjects/ApsSegurity/modules/credentialManager/userModel.js",
+		"/E/ApsProjects/ApsSegurity/modules/credentialManager/userRouter.js",
+		"/E/ApsProjects/ApsSegurity/public/app.js",
+		"/E/ApsProjects/ApsSegurity/ServerCredential.js",
+		"/E/ApsProjects/ApsSegurity/public/modules/login/loginController.js",
+		"/E/ApsProjects/ApsSegurity/ControllerModels.js",
+		"/E/ApsProjects/ApsSegurity/modules/credentialManager/authRouter.js",
+		"/E/ApsProjects/ApsSegurity/Credentials.sln",
+		"/E/auth-quickstart-master/package.json",
+		"/E/auth-quickstart-master/app/setupPassport.js",
+		"/E/auth-quickstart-master/app.js",
+		"/E/auth-quickstart-master/app/sequelize.js",
+		"/E/auth-quickstart-master/app/controllers/signupController.js",
+		"/E/auth-quickstart-master/app/model/User.js",
+		"/E/ApsProjects/ApsSegurity/package.json",
+		"/E/auth-quickstart-master/app/model/models.js",
+		"/E/NodeJSAuth-master/config/passport/local.js",
+		"/E/ApsProjects/ApsSegurity/app.js",
+		"/E/node-api-rest-example/app.js",
+		"/E/node-api-rest-example/package.json",
+		"/E/Jtecnologia/CredentialManager/ConnectionDB.js",
+		"/E/Jtecnologia/CredentialManager/ControllerModels.js",
+		"/E/Jtecnologia/CredentialManager/ControllerRouters.js",
+		"/E/Jtecnologia/CredentialManager/modules/credentialManager/userRouter.js",
+		"/E/Jtecnologia/CredentialManager/public/core/serversoftApi.js",
+		"/E/Jtecnologia/CredentialManager/ServerCredential.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"users",
+			"bcrypt",
+			"loginController"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ApsSegurity.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
