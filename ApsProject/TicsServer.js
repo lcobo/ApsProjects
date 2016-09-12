@@ -16,7 +16,7 @@ var methodOverride = require('method-override');
 var path = require("path");
 
 //variable for configuration
-var port = 80;
+var port = 6911;
 //express configuration
 app.set('port', process.env.PORT || port);
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -26,7 +26,7 @@ app.use(methodOverride());
 //cross domain
 var listdomain = {
     "http://localhost": true,
-    "http://192.168.100.254": true,
+    "http://192.168.100.190": true,
 };
 app.use(function (request, response, next) {
     if (request.headers.origin == undefined) {
