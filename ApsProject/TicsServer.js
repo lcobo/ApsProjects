@@ -87,19 +87,23 @@ app.use("/api",methodology);
 var method = require("./Modules/Configuration/methodRouter.js")
 app.use("/api",method);
 
+var typequestion = require("./Modules/Configuration/typequestionRouter.js")
+app.use("/api",typequestion);
 
+var optionquestion = require("./Modules/Configuration/optionquestionRouter.js")//Pendiente de Revisar
+app.use("/api",optionquestion);
 
-/*var bed = require("./modules/HospitalizationEvents/hebedRouter.js");
-app.use("/api", bed);
-var hopitalization = require("./modules/HospitalizationEvents/hehospitalizationRouter.js");
-app.use("/api", hopitalization);
-var event = require("./modules/HospitalizationEvents/heeventsRouter.js");
-app.use("/api", event);
-var room = require("./modules/HospitalizationEvents/heroomRouter.js");
-app.use("/api", room);*/
+var dimension = require("./Modules/Configuration/dimensionRouter.js")
+app.use("/api",dimension);
 
+var subdimension = require("./Modules/Configuration/subdimensionRouter.js")
+app.use("/api",subdimension);
 
+var feature = require("./Modules/Configuration/featureRouter.js")
+app.use("/api",feature);
 
+var question = require("./Modules/Configuration/questionRouter.js")
+app.use("/api",question);
 ///////////////////////////////////////////////////////////
 
 

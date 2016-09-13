@@ -1,22 +1,18 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('typequestion', {
-    tqoid: {
+  return sequelize.define('feature', {
+    feoid: {
       type: 'NUMERIC',
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    tqdescription: {
+    fename: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    tqstate: {
-      type: 'NUMERIC',
       allowNull: false
     }
   }, {
-    tableName: 'typequestion'
+    tableName: 'feature'
   });
 };

@@ -1,22 +1,26 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('typequestion', {
-    tqoid: {
+  return sequelize.define('subdimension', {
+    suoid: {
       type: 'NUMERIC',
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    tqdescription: {
+    suname: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    tqstate: {
+    dioid: {
       type: 'NUMERIC',
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'dimension',
+        key: 'dioid'
+      }
     }
   }, {
-    tableName: 'typequestion'
+    tableName: 'subdimension'
   });
 };
