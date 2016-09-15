@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     meformula: {
-      type: 'ARRAY',
+       type: DataTypes.STRING,
       allowNull: false
     },
     mevaluemax: {

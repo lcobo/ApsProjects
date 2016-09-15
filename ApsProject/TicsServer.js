@@ -90,7 +90,7 @@ app.use("/api",method);
 var typequestion = require("./Modules/Configuration/typequestionRouter.js")
 app.use("/api",typequestion);
 
-var optionquestion = require("./Modules/Configuration/optionquestionRouter.js")//Pendiente de Revisar
+var optionquestion = require("./Modules/Configuration/optionquestionRouter.js")
 app.use("/api",optionquestion);
 
 var dimension = require("./Modules/Configuration/dimensionRouter.js")
@@ -104,9 +104,45 @@ app.use("/api",feature);
 
 var question = require("./Modules/Configuration/questionRouter.js")
 app.use("/api",question);
+
+var subfeature = require("./Modules/Configuration/subfeatureRouter.js")
+app.use("/api",subfeature);
+
+var attribute = require("./Modules/Configuration/attributeRouter.js")
+app.use("/api",attribute);
+
+var metric = require("./Modules/Configuration/metricRouter.js")
+app.use("/api",metric);
+
+var variable = require("./Modules/Configuration/variableRouter.js")
+app.use("/api",variable);
+
+var responsevalue = require("./Modules/Configuration/responsevalueRouter.js")
+app.use("/api",responsevalue);
+
+var rolesubdimension = require("./Modules/Configuration/rolesubdimensionRouter.js")
+app.use("/api",rolesubdimension);
+
+var PHCPhase = require("./Modules/Project/PHCPhaseRouter.js")
+app.use("/api",PHCPhase);
+
+var typefacility = require("./Modules/Project/typefacilityRouter.js")
+app.use("/api",typefacility);
+
+var facility = require("./Modules/Project/facilityRouter.js")
+app.use("/api",facility);
+
+var participation = require("./Modules/Project/participationRouter.js")
+app.use("/api",participation);
+
+var teamproject = require("./Modules/Project/teamprojectRouter.js")
+app.use("/api",teamproject);
+
+var project = require("./Modules/Project/projectRouter.js")
+app.use("/api",project);
+
+
 ///////////////////////////////////////////////////////////
-
-
 http.createServer(app).listen(app.get('port'), function(){
   console.log("TicSalud Server working in  " + port);
 });
